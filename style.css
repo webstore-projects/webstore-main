@@ -1,0 +1,230 @@
+:root {
+    --primary: #0066FF;
+    --dark: #0f172a;
+    --light: #f8fafc;
+    --text: #334155;
+    --white: #ffffff;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Inter', sans-serif; color: var(--text); line-height: 1.6; scroll-behavior: smooth; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.section { padding: 80px 0; }
+.bg-light { background: var(--light); }
+.bg-dark { background: var(--dark); color: white; }
+.section-title { text-align: center; font-size: 2.5rem; margin-bottom: 50px; font-weight: 800; }
+.section-title.white { color: white; }
+
+/* Navigacija */
+nav { height: 80px; display: flex; align-items: center; background: white; border-bottom: 1px solid #e2e8f0; position: sticky; top: 0; z-index: 100; }
+.nav-flex { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+.logo { font-size: 1.5rem; font-weight: 800; color: var(--dark); display: flex;
+    align-items: center;
+    text-decoration: none; }
+.logo span { color: var(--primary); font-family: 'Space Grotesk', sans-serif; font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--dark);
+    letter-spacing: -0.5px;
+    line-height: 1;}
+.nav-links { list-style: none; display: flex; gap: 30px; align-items: center; }
+.nav-links a { text-decoration: none; color: var(--text); font-weight: 600; }
+.btn-nav { background: var(--primary); color: white !important; padding: 10px 20px; border-radius: 8px; }
+
+/* Hero */
+.hero { padding: 100px 0; background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); text-align: center; }
+.hero h1 { font-size: 4rem; line-height: 1.1; margin-bottom: 20px; color: var(--dark); }
+.hero h1 span { color: var(--primary); }
+.hero p { font-size: 1.25rem; max-width: 700px; margin: 0 auto 40px; color: #64748b; }
+.hero-btns { display: flex; justify-content: center; gap: 20px; }
+
+/* Kortelės */
+.product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
+.card { background: white; border-radius: 12px; border: 1px solid #e2e8f0; overflow: hidden; transition: 0.3s; }
+.card:hover { transform: translateY(-10px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }
+.card-img { height: 220px; background: #cbd5e1; display: flex; align-items: center; justify-content: center; font-weight: bold; }
+.card-body { padding: 25px; }
+.category { color: var(--primary); font-weight: bold; font-size: 0.8rem; text-transform: uppercase; }
+.card-body h3 { margin: 10px 0; font-size: 1.5rem; }
+.view-demo { text-decoration: none; color: var(--primary); font-weight: bold; display: inline-block; margin-top: 15px; }
+
+/* Kainos */
+.pricing-flex { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
+.price-card { background: white; padding: 40px; border-radius: 16px; border: 1px solid #e2e8f0; width: 350px; text-align: center; }
+.price-card.featured { border: 3px solid var(--primary); position: relative; }
+.tag { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--primary); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; }
+.amount { font-size: 3.5rem; font-weight: 800; margin: 20px 0; color: var(--dark); }
+.price-card ul { list-style: none; margin-bottom: 30px; text-align: left; }
+.price-card li { margin-bottom: 12px; font-size: 1.1rem; }
+
+/* Atsiliepimai */
+.testimonials { display: flex; gap: 30px; justify-content: center; }
+.t-card { background: var(--light); padding: 30px; border-radius: 12px; max-width: 500px; }
+.t-card p { font-style: italic; font-size: 1.2rem; }
+.t-card small { display: block; margin-top: 15px; font-weight: bold; color: var(--primary); }
+
+/* Formos */
+.narrow { max-width: 600px; }
+.contact-form { display: flex; flex-direction: column; gap: 15px; }
+.contact-form input, .contact-form select, .contact-form textarea { padding: 15px; border-radius: 8px; border: none; font-size: 1rem; }
+.full-width { width: 100%; cursor: pointer; border: none; }
+
+/* Mygtukai */
+.btn { padding: 15px 35px; border-radius: 8px; text-decoration: none; font-weight: bold; transition: 0.3s; }
+.primary { background: var(--primary); color: white; }
+.secondary { background: white; color: var(--dark); border: 1px solid #cbd5e1; }
+.btn:hover { opacity: 0.9; }
+
+/* FAQ Stiliai */
+.faq-container {
+    margin-top: 30px;
+}
+
+.faq-item {
+    background: var(--white);
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    padding: 20px;
+    transition: 0.3s;
+}
+
+.faq-item:hover {
+    border-color: var(--primary);
+}
+
+.faq-question {
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: var(--dark);
+    margin-bottom: 10px;
+    position: relative;
+    cursor: default;
+}
+
+.faq-answer {
+    color: var(--text);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Pridėkime mažą akcentą klausimui */
+.faq-question::before {
+    content: "Q.";
+    color: var(--primary);
+    margin-right: 10px;
+}
+
+/* Slapukų pranešimo stilius */
+.cookie-container {
+    position: fixed;
+    bottom: -100px; /* Pradžioje paslėptas po ekranu */
+    left: 0;
+    right: 0;
+    background: var(--dark);
+    color: white;
+    padding: 20px 0;
+    z-index: 3000;
+    transition: bottom 0.5s ease-in-out;
+    box-shadow: 0 -10px 30px rgba(0,0,0,0.2);
+}
+
+.cookie-container.show {
+    bottom: 0; /* Pakyla į ekraną */
+}
+
+.cookie-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.cookie-content p { font-size: 0.9rem; margin: 0; }
+
+.cookie-btns { display: flex; align-items: center; gap: 20px; }
+
+.cookie-link { color: #ccc; font-size: 0.8rem; text-decoration: underline; }
+
+.btn.small { padding: 8px 20px; font-size: 0.8rem; }
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+    z-index: 2000;
+    transition: 0.3s;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.05);
+    background-color: #1ebe57;
+}
+
+/* Mobiliems paslepiame tekstą, paliekame tik piktogramą */
+@media (max-width: 480px) {
+    .whatsapp-float {
+        padding: 15px;
+        bottom: 20px;
+        right: 20px;
+    }
+    .whatsapp-float span { display: none; }
+}
+
+
+/* Mobilioji versija */
+@media (max-width: 768px) {
+    .cookie-content { flex-direction: column; text-align: center; }
+}
+
+
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.5rem; }
+    .nav-links { display: none; }
+}
+
+@media (max-width: 768px) {
+    /* Navigacija tampa vertikali arba paslepiama */
+    .nav-flex {
+        flex-direction: column;
+        padding: 15px 0;
+    }
+    .nav-links {
+        margin-top: 15px;
+        gap: 15px;
+        padding: 0;
+    }
+    .nav-links li { margin: 0 5px; }
+
+    /* Hero tekstas */
+    .hero h1 { font-size: 2rem; }
+    
+    /* Produktų tinklelis - 1 stulpelis */
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Kainų blokai */
+    .pricing-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+    .price-card { width: 100%; max-width: 400px; }
+}
+del {
+    font-size: 1rem;
+    margin-right: 10px;
+    text-decoration: line-through;
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebStore – Paruoštos svetainės jūsų verslui</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="container nav-flex">
+            <a href="#" class="logo">
+                <svg width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://w3.org" style="margin-right: 12px;">
+                    <path d="M7 8L3 12L7 16" stroke="#0066FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M17 8L21 12L17 16" stroke="#00ff88" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M14 4L10 20" stroke="#0f172a" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                Web<span>Store</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#katalogas">Katalogas</a></li>
+                <li><a href="#kainos">Kainos</a></li>
+                <li><a href="#atsiliepimai">Atsiliepimai</a></li>
+                <li><a href="#kontaktai" class="btn-nav">Pradėti</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Svetainė jūsų verslui – <br><span>jau šiandien.</span></h1>
+            <p>Išsirinkite profesionalų sprendimą ir startuokite per 24 valandas. Jokių ilgų kūrimo procesų.</p>
+            <div class="hero-btns">
+                <a href="#katalogas" class="btn primary">Išsirinkti svetainę</a>
+                <a href="https://wa.me" class="btn secondary">Pasikonsultuoti</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="katalogas" class="section">
+        <div class="container">
+            <h2 class="section-title">Mūsų paruošti sprendimai</h2>
+            <div class="product-grid">
+                <div class="card"><div class="card-img" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://unsplash.com') center/cover;">AutoPro</div><div class="card-body"><span class="category">Transportas</span><h3>Auto serviso svetainė</h3><p>Su integruota registracijos forma ir kainoraščiu.</p><a href="#" class="view-demo">Live Preview →</a></div></div>
+                <div class="card"><div class="card-img" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://unsplash.com') center/cover;">ArtisanGo</div><div class="card-body"><span class="category">Kūryba</span><h3>Amatininko portfolio</h3><p>Minimalistinis dizainas su fokusu į galeriją.</p><a href="#" class="view-demo">Live Preview →</a></div></div>
+                <div class="card"><div class="card-img" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://unsplash.com') center/cover;">BuildMaster</div><div class="card-body"><span class="category">Statyba</span><h3>Apdailos paslaugos</h3><p>Prieš/Po darbų galerija ir užklausos forma.</p><a href="#" class="view-demo">Live Preview →</a></div></div>
+                <div class="card"><div class="card-img" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://unsplash.com') center/cover;">StayLocal</div><div class="card-body"><span class="category">Turizmas</span><h3>Svečių namų svetainė</h3><p>Rezervacijos užklausa ir interaktyvus žemėlapis.</p><a href="#" class="view-demo">Live Preview →</a></div></div>
+                <div class="card"><div class="card-img" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://unsplash.com') center/cover;">PersonalBrand</div><div class="card-body"><span class="category">Karjera</span><h3>Asmeninis puslapis</h3><p>Eksperto CV, pasiekimai ir kontaktų forma.</p><a href="#" class="view-demo">Live Preview →</a></div></div>
+                <div class="card"><div class="card-img" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://unsplash.com') center/cover;">GreenYard</div><div class="card-body"><span class="category">Aplinka</span><h3>Gerbūvio tvarkymas</h3><p>Paslaugų paketas su skambučių registracija.</p><a href="#" class="view-demo">Live Preview →</a></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="atsiliepimai" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Ką sako verslo savininkai</h2>
+            <div class="testimonials">
+                <div class="t-card"><p>"Reikėjo svetainės vakar. Pasirinkau AutoPro ir kitą vakarą jau turėjome veikiantį puslapį."</p><small>— Tomas K., Serviso vadovas</small></div>
+                <div class="t-card"><p>"Dizainas pranoko lūkesčius – klientai galvoja, kad užsakiau individualų dizainą."</p><small>— Viktorija M., Keramikos studija</small></div>
+                <div class="t-card"><p>"WebStore viską sutvarkė už mane. Man teliko tik pradėti kelti nuotraukas."</p><small>— Paulius R., Svečių namai</small></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontaktai" class="section">
+        <div class="container narrow">
+            <h2 class="section-title">Pradėkime projektą</h2>
+            <form class="contact-form">
+                <div style="display:none; visibility:hidden;"><input type="text" name="b_field" id="b_field" tabindex="-1"></div>
+                <input type="text" placeholder="Vardas" required>
+                <input type="email" placeholder="El. paštas" required>
+                <select required>
+                    <option value="">Pasirinkite šabloną</option>
+                    <option>AutoPro</option>
+                    <option>ArtisanGo</option>
+                    <option>BuildMaster</option>
+                    <option>Kita</option>
+                </select>
+                <textarea rows="5" placeholder="Jūsų žinutė"></textarea>
+                <button type="submit" class="btn primary full-width">Siųsti užklausą</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="kainos" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Investicija į jūsų verslą</h2>
+            <div class="pricing-flex">
+                
+                <!-- PAGRINDINIS PASIŪLYMAS -->
+                <div class="price-card featured">
+                    <div class="tag">STARTUOK DABAR – TIK 290€</div>
+                    <h3>Business Start</h3>
+                    <div class="amount">290€</div>
+                    <p style="color: var(--primary); font-weight: bold; margin-bottom: 20px;">
+                        <del style="color: #64748b; font-weight: normal;">Standartinė kaina: 450€</del><br>
+                        Pasiūlymas galioja pirmoms 3 svetainėms šį mėnesį!
+                    </p>
+                    <ul>
+                        <li>Modernus dizainas</li>
+                        <li>Sutvarkytas Hostingas + SSL</li>
+                        <li>Mobili versija</li>
+                        <li>Jūsų turinio sukėlimas</li>
+                        <li>Startas per 24 valandas</li>
+                    </ul>
+                    <a href="#kontaktai" class="btn primary full-width">Užsakyti projektą</a>
+                </div>
+    
+                <!-- ANTRAS PASIŪLYMAS (PALYGINIMUI) -->
+                <div class="price-card">
+                    <h3>Custom Solution</h3>
+                    <p style="margin-top: 20px; font-weight: bold;">Nuo 650€</p>
+                    <p style="font-size: 0.9rem; color: #64748b;">Individualus dizainas ir papildomos funkcijos</p>
+                    <ul style="margin-top: 20px;">
+                        <li>Visi „Business Start“ privalumai</li>
+                        <li>Unikalus dizainas</li>
+                        <li>Daugiakalbiškumas</li>
+                        <li>Individualios integracijos</li>
+                    </ul>
+                    <a href="https://wa.me" class="btn secondary full-width">Konsultuotis</a>
+                </div>
+    
+            </div>
+        </div>
+    </section>
+    
+
+    <footer>
+        <div class="container" style="text-align: center; color: #64748b; padding-bottom: 40px;">
+            <p>&copy; 2024 WebStore.lt. Nuotraukos iš Unsplash.</p>
+        </div>
+    </footer>
+
+    <div id="infoModal"><div class="modal-content"><span class="close-modal">&times;</span><h2 id="modalTitle"></h2><div id="modalDetails"></div></div></div>
+    <div id="cookie-banner" class="cookie-container"><div class="cookie-content"><p>Svetainėje naudojame slapukus verslo patirties gerinimui. 🍪</p><div class="cookie-btns"><button id="accept-cookies" class="btn primary small">Sutinku</button></div></div></div>
+    <a href="https://wa.me?text=Sveiki,%20domina%20svetainė" class="whatsapp-float" target="_blank"><svg viewBox="0 0 448 512" width="30" height="30"><path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.3-16.4-14.6-27.4-32.7-30.7-38.2-3.2-5.6-.4-8.6 2.4-11.4 2.6-2.5 5.5-6.5 8.3-9.7 2.8-3.3 3.7-5.5 5.5-9.2 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.8 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.5 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg><span>WhatsApp</span></a>
+
+    <script src="script.js"></script>
+</body>
+</html>

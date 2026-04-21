@@ -1,0 +1,175 @@
+const infoModal = document.getElementById('infoModal');
+const modalTitle = document.getElementById('modalTitle');
+const modalDetails = document.getElementById('modalDetails');
+
+// Duomenų bazė šablonams
+const templateData = {
+    "AutoPro": {
+        specs: ["Registracijos forma", "Kainoraštis", "Meistrų skiltis", "Google Maps"],
+        demoUrl: "https://webstore.lt",
+        delivery: "24 val."
+    },
+    "ArtisanGo": {
+        specs: ["Portfolio galerija", "Instagram integracija", "Atsiliepimai", "Kontaktų forma"],
+        demoUrl: "https://webstore.lt",
+        delivery: "24 val."
+    },
+    "BuildMaster": {
+        specs: ["Prieš/Po slankiklis", "Kainos skaičiuoklė", "Objektų žemėlapis", "Sertifikatai"],
+        demoUrl: "https://webstore.lt",
+        delivery: "48 val."
+    }
+    // Pridėkite kitus šablonus pagal pavadinimą (ID)
+};
+
+document.querySelectorAll('.view-demo').forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        
+        // Paimame pavadinimą iš kortelės (pvz. "AutoPro")
+        const cardTitle = link.closest('.card').querySelector('.card-img').innerText;
+        const data = templateData[cardTitle] || { specs: ["Standartinės funkcijos"], demoUrl: "#", delivery: "24 val." };
+
+        modalTitle.innerText = cardTitle + " – Išsami informacija";
+        
+        modalDetails.innerHTML = `
+            <div style="background: #f8fafc; padding: 15px; border-radius: 10px; margin-bottom: 20px;">
+                <p><strong>Pristatymas:</strong> paruošime per ${data.delivery}</p>
+                <p><strong>Kas įeina į paketą:</strong></p>
+                <ul style="padding-left: 20px;">
+                    ${data.specs.map(s => `<li>✅ ${s}</li>`).join('')}
+                    <li>✅ Hostingas + SSL (1 metai)</li>
+                </ul>
+            </div>
+            <div style="display: flex; gap: 10px;">
+                <a href="${data.demoUrl}" target="_blank" class="btn secondary" style="flex: 1; text-align: center;">Žiūrėti tikrą demo ↗</a>
+            </div>
+        `;
+        
+        infoModal.style.display = 'flex';
+    });
+});
+
+
+const templateData = {
+    "AutoPro": {
+        specs: [
+            "Automatinė registracijos forma",
+            "Paslaugų ir kainų skaičiuoklė",
+            "Meistrų komandos pristatymas",
+            "Integruoti Google atsiliepimai",
+            "Google Maps lokacija"
+        ],
+        demoUrl: "https://webstore.lt",
+        delivery: "24 val."
+    },
+    "ArtisanGo": {
+        specs: [
+            "Aukštos kokybės darbų galerija",
+            "Instagram srauto integracija",
+            "Asmeninė istorija (Storytelling)",
+            "Užsakymų forma individualiems darbams",
+            "Pritaikyta prekybai mugėse (QR kodas)"
+        ],
+        demoUrl: "https://webstore.lt",
+        delivery: "24 val."
+    },
+    "BuildMaster": {
+        specs: [
+            "Interaktyvus Prieš/Po darbų slankiklis",
+            "Projektų kvadratūros skaičiuoklė",
+            "Sertifikatų ir licencijų blokas",
+            "Didelės apimties darbų portfolio",
+            "Skubios iškvietos mygtukas"
+        ],
+        demoUrl: "https://webstore.lt",
+        delivery: "48 val."
+    },
+    "StayLocal": {
+        specs: [
+            "Kambarių/namelių užimtumo kalendorius",
+            "Lankytinų vietų interaktyvus žemėlapis",
+            "Tiesioginė WhatsApp rezervacija",
+            "Nuotraukų karuselė su „Lightroom“ filtrais",
+            "Vietinių taisyklių ir DUK skiltis"
+        ],
+        demoUrl: "https://webstore.lt",
+        delivery: "24 val."
+    },
+    "PersonalBrand": {
+        specs: [
+            "Skaitmeninis CV / Resume",
+            "Pasiekimų ir logotipų juosta (Social Proof)",
+            "Kalendoriaus integracija konsultacijoms",
+            "Nuorodų medis (Linktree pakaitalas)",
+            "Blog'o/Naujienlaiškio prenumerata"
+        ],
+        demoUrl: "https://webstore.lt",
+        delivery: "24 val."
+    },
+    "GreenYard": {
+        specs: [
+            "Sezoninių paslaugų paketas",
+            "Darbų zonų žemėlapis",
+            "Skambučių registravimo sistema",
+            "Medžiagų (trinkelių, augalų) katalogas",
+            "Video darbų pavyzdžių skiltis"
+        ],
+        demoUrl: "https://webstore.lt",
+        delivery: "24 val."
+    }
+};
+
+
+const contactForm = document.querySelector('.contact-form');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // 1. Tikriname Honeypot lauką
+        const botTrap = document.getElementById('b_field').value;
+        if (botTrap !== "") {
+            console.warn("Spam detected and blocked.");
+            return; // Sustabdome siuntimą, jei laukas užpildytas
+        }
+
+        // 2. Vizualinis grįžtamasis ryšys (Sales Assistant mode)
+        const btn = contactForm.querySelector('button');
+        const originalText = btn.innerText;
+        
+        btn.innerText = "Siunčiama...";
+        btn.disabled = true;
+
+        // Imituojame siuntimą (arba čia jungiame Netlify/kitą servisą)
+        setTimeout(() => {
+            // Sukuriame gražų pranešimą vietoje paprasto alert
+            btn.style.background = "#00ff88";
+            btn.innerText = "Žinutė išsiųsta! ✓";
+            
+            setTimeout(() => {
+                btn.innerText = originalText;
+                btn.style.background = "";
+                btn.disabled = false;
+                contactForm.reset();
+            }, 3000);
+        }, 1500);
+    });
+}
+
+
+// SLAPUKŲ LOGIKA
+const cookieBanner = document.getElementById('cookie-banner');
+const acceptBtn = document.getElementById('accept-cookies');
+
+// Patikriname, ar vartotojas jau buvo sutikęs anksčiau
+if (!localStorage.getItem('cookiesAccepted')) {
+    setTimeout(() => {
+        cookieBanner.classList.add('show');
+    }, 2000); // Atsiranda po 2 sekundžių
+}
+
+acceptBtn.addEventListener('click', () => {
+    localStorage.setItem('cookiesAccepted', 'true');
+    cookieBanner.classList.remove('show');
+});
