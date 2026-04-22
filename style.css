@@ -107,14 +107,12 @@ nav { height: 80px; display: flex; align-items: center; background: white; borde
     line-height: 1.5;
 }
 
-/* Pridėkime mažą akcentą klausimui */
 .faq-question::before {
     content: "Q.";
     color: var(--primary);
     margin-right: 10px;
 }
 
-/* Slapukų pranešimo stilius */
 .cookie-container {
     position: fixed;
     bottom: -100px; /* Pradžioje paslėptas po ekranu */
@@ -152,7 +150,7 @@ nav { height: 80px; display: flex; align-items: center; background: white; borde
 
 .whatsapp-float {
     position: fixed;
-    bottom: 30px;
+    bottom: 80px;
     right: 30px;
     background-color: #25d366;
     color: #fff;
@@ -164,7 +162,7 @@ nav { height: 80px; display: flex; align-items: center; background: white; borde
     text-decoration: none;
     font-weight: 700;
     box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
-    z-index: 2000;
+    z-index: 99999;
     transition: 0.3s;
 }
 
@@ -172,6 +170,12 @@ nav { height: 80px; display: flex; align-items: center; background: white; borde
     transform: scale(1.05);
     background-color: #1ebe57;
 }
+
+@keyframes pulse-green {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+  }
 
 /* Mobiliems paslepiame tekstą, paliekame tik piktogramą */
 @media (max-width: 480px) {
