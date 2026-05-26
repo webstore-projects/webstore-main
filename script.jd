@@ -2,26 +2,6 @@ const infoModal = document.getElementById('infoModal');
 const modalTitle = document.getElementById('modalTitle');
 const modalDetails = document.getElementById('modalDetails');
 
-// Duomenų bazė šablonams
-const templateData = {
-    "AutoPro": {
-        specs: ["Registracijos forma", "Kainoraštis", "Meistrų skiltis", "Google Maps"],
-        demoUrl: "https://webstore.lt",
-        delivery: "24 val."
-    },
-    "ArtisanGo": {
-        specs: ["Portfolio galerija", "Instagram integracija", "Atsiliepimai", "Kontaktų forma"],
-        demoUrl: "https://webstore.lt",
-        delivery: "24 val."
-    },
-    "BuildMaster": {
-        specs: ["Prieš/Po slankiklis", "Kainos skaičiuoklė", "Objektų žemėlapis", "Sertifikatai"],
-        demoUrl: "https://webstore.lt",
-        delivery: "48 val."
-    }
-    // Pridėkite kitus šablonus pagal pavadinimą (ID)
-};
-
 document.querySelectorAll('.view-demo').forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
@@ -173,3 +153,9 @@ acceptBtn.addEventListener('click', () => {
     localStorage.setItem('cookiesAccepted', 'true');
     cookieBanner.classList.remove('show');
 });
+
+document.getElementById('reject-cookies').addEventListener('click', function() {
+    document.getElementById('cookie-banner').style.display = 'none';
+    // Čia slapukai lieka neaktyvūs
+});
+
